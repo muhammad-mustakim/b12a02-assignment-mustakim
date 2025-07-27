@@ -1,5 +1,5 @@
 .navbar {
-  margin: 0 4rem;
+  margin: 0 6rem;
 }
 
 /* nav */
@@ -9,6 +9,7 @@
   align-items: center;
   background-color: #fff;
   padding: 1rem;
+  margin: 0.5rem;
 }
 
 .nav-logo {
@@ -46,8 +47,8 @@
 .flower-details {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 1rem 9rem;
+  justify-content: space-between;
+  margin: 0 9rem;
 }
 
 .flower-info {
@@ -82,6 +83,134 @@ span {
   margin-top: 1rem;
 }
 
+/* our plants */
+.our-plants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 9rem;
+  text-align: center;
+}
+
+.plants-info p {
+  font-size: 0.8rem;
+  color: #252432;
+  opacity: 0.7;
+}
+
+/* Items */
+.items {
+  margin: 3rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  gap: 0;
+  padding: 0;
+
+}
+
+.card-info p {
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.btn-primary {
+  background-color: #E95A08;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 1.8rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.added-msg {
+  display: none;
+  color: green;
+  font-size: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.card-info:focus-within .added-msg {
+  display: block;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Bonus Container */
+
+.bonus-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 8rem auto;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.images,
+.bonus-list {
+  flex: 1;
+}
+
+.images {
+  display: flex;
+  position: relative;
+}
+
+.trusted-img img {
+  width: 16rem;
+  position: absolute;
+  top: -7rem;
+  left: 14rem;
+}
+
+.bonus-img img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.bonus-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-right: 2.5rem;
+  margin-left: 3.8rem;
+}
+
+.list ul li {
+
+  color: #252432;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  padding: .5rem;
+  align-items: flex-start;
+  word-wrap: break-word;
+}
+
+
 
 /* Responsive for mobile device */
 @media (max-width: 576px) {
@@ -106,7 +235,9 @@ span {
   }
 
   /* End Nav Bar Responsive for mobile */
-
+  .our-plants {
+    margin: 0.5rem;
+  }
 
   /* Flower details Responsive for mobile */
 
@@ -118,13 +249,17 @@ span {
   }
 
   .flower-img img {
-    width: 26.5rem;
-    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
   }
 
   .flower-info {
     width: 100%;
     align-items: flex-start;
+    margin: 0;
 
   }
 
@@ -132,4 +267,55 @@ span {
     align-items: flex-start;
   }
 
+  .our-plants {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  /* Items responsive */
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+    margin: 0;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 1rem 1.8rem;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Bonus contaner */
+  .trusted-img {
+    display: none;
+  }
+
+  .bonus-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .bonus-list {
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .bonus-img img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .list ul li {
+    text-align: flex-start;
+  }
 }
